@@ -82,13 +82,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
+#Replace name, Password, Host with your RDS Database name, user, password, host.
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'backendcourse',
-        'USER': 'mysuperuser',
-        'PASSWORD': 'mysuperuser',
-        'HOST': 'backendcourse.cryvzqlphtmv.us-east-1.rds.amazonaws.com',
+        'NAME': 'mydatabase',
+        'USER': 'mydatabaseuser',
+        'PASSWORD': 'mypassword',
+        'HOST': 'myrdshost.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -142,18 +144,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'codewithmuh@gmail.com'
-EMAIL_HOST_PASSWORD = 'fmixcyloykacsmoy'
+EMAIL_HOST_USER = 'Your Email'
+EMAIL_HOST_PASSWORD = 'Your Password'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
 
-
-AWS_ACCESS_KEY_ID = 'AKIAVODTI7NQWRYLPG4D'
-AWS_SECRET_ACCESS_KEY = 'jY6soDJCUqfFDHwqMozvSWbMvK7T8vdckFy77hRH'
-AWS_STORAGE_BUCKET_NAME = 'backendcourse'
+AWS_ACCESS_KEY_ID = 'AWS_ACCESS_KEY_ID '
+AWS_SECRET_ACCESS_KEY = 'AWS_SECRET_ACCESS_KEY'
+AWS_STORAGE_BUCKET_NAME = 'AWS_STORAGE_BUCKET_NAME'
 AWS_S3_SIGNATURE_NAME = 's3v4',
-AWS_S3_REGION_NAME = 'us-east-1'
+AWS_S3_REGION_NAME = 'AWS_S3_REGION_NAME'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL =  None
 AWS_S3_VERITY = True
